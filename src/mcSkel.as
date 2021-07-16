@@ -11,6 +11,7 @@ package {
 
         public var idlefoot:MovieClip;
         public var chest:MovieClip;
+		public var AuraFX:MovieClip;
         public var weaponOff:MovieClip;
         public var frontthigh:MovieClip;
         public var cape:MovieClip;
@@ -28,6 +29,7 @@ package {
         public var robe:MovieClip;
         public var pvpFlag:MovieClip;
 		public var vertigoMC:MovieClip;
+		public var blindMC:MovieClip;
 		public var hexMC:MovieClip;
 		public var silenceMC:MovieClip;
         public var weapon:MovieClip;
@@ -50,7 +52,7 @@ package {
         public var onMove:Boolean = false;
 
         public function mcSkel(){
-            addFrameScript(0, this.frame1, 7, this.frame8, 8, this.frame9, 16, this.frame17, 20, this.frame21, 29, this.frame30, 43, this.frame44, 44, this.frame45, 60, this.frame61, 61, this.frame62, 68, this.frame69, 74, this.frame75, 75, this.frame76, 92, this.frame93, 93, this.frame94, 106, this.frame107, 107, this.frame108, 131, this.frame132, 141, this.frame142, 142, this.frame143, 161, this.frame162, 162, this.frame163, 176, this.frame177, 185, this.frame186, 186, this.frame187, 220, this.frame221, 221, this.frame222, 237, this.frame238, 238, this.frame239, 247, this.frame248, 0x0100, this.frame257, 264, this.frame265, 265, this.frame266, 285, this.frame286, 288, this.frame289, 289, this.frame290, 321, this.frame322, 322, this.frame323, 340, this.frame341, 342, this.frame343, 343, this.frame344, 368, this.frame369, 369, this.frame370, 433, this.frame434, 434, this.frame435, 451, this.frame452, 470, this.frame471, 478, this.frame479, 486, this.frame487, 487, this.frame488, 488, this.frame489, 534, this.frame535, 535, this.frame536, 565, this.frame566, 566, this.frame567, 574, this.frame575, 575, this.frame576, 583, this.frame584, 596, this.frame597, 597, this.frame598, 608, this.frame609, 609, this.frame610, 628, this.frame629, 629, this.frame630, 658, this.frame659, 659, this.frame660, 687, this.frame688, 688, this.frame689, 715, this.frame716, 716, this.frame717, 733, this.frame734, 734, this.frame735, 755, this.frame756, 756, this.frame757, 762, this.frame763, 763, this.frame764, 792, this.frame793, 793, this.frame794, 816, this.frame817, 817, this.frame818, 820, this.frame821, 837, this.frame838, 838, this.frame839, 841, this.frame842, 864, this.frame865, 865, this.frame866, 868, this.frame869, 890, this.frame891, 891, this.frame892, 894, this.frame895, 908, this.frame909, 909, this.frame910, 920, this.frame921, 921, this.frame922, 940, this.frame941, 941, this.frame942, 955, this.frame956, 956, this.frame957, 977, this.frame978, 978, this.frame979, 989, this.frame990, 990, this.frame991, 1003, this.frame1004, 1004, this.frame1005, 1018, this.frame1019, 1019, this.frame1020, 1029, this.frame1030, 1042, this.frame1043, 1043, this.frame1044, 1057, this.frame1058, 1058, this.frame1059, 1069, this.frame1070, 1070, this.frame1071, 1085, this.frame1086, 1086, this.frame1087, 1098, this.frame1099, 1099, this.frame1100, 1110, this.frame1111, 1111, this.frame1112, 1113, this.frame1114, 1114, this.frame1115, 1128, this.frame1129, 1129, this.frame1130, 1135, this.frame1136, 1136, this.frame1137, 1148, this.frame1149, 1149, this.frame1150, 1165, this.frame1166, 1166, this.frame1167, 1177, this.frame1178, 1178, this.frame1179, 1179, this.frame1180, 1189, this.frame1190, 1201, this.frame1202, 1202, this.frame1203, 1221, this.frame1222, 1222, this.frame1223, 1236, this.frame1237, 1237, this.frame1238, 1252, this.frame1253, 1253, this.frame1254, 1286, this.frame1287, 1287, this.frame1288, 1324, this.frame1325, 1325, this.frame1326, 1333, this.frame1334, 1334, this.frame1335, 1406, this.frame1407, 1407, this.frame1408, 1444, this.frame1445, 1445, this.frame1446, 1460, this.frame1461, 1461, this.frame1462, 1470, this.frame1471, 1471, this.frame1472, 1502, this.frame1503, 1503, this.frame1504, 1506, this.frame1507, 1529, this.frame1530, 1530, this.frame1531, 1533, this.frame1534, 1555, this.frame1556, 1556, this.frame1557, 1572, this.frame1573, 1573, this.frame1574, 1586, this.frame1587, 1587, this.frame1588, 1606, this.frame1607, 1607, this.frame1608, 1648, this.frame1649, 1649, this.frame1650, 1658, this.frame1659, 1672, this.frame1673, 1673, this.frame1674, 1690, this.frame1691, 1710, this.frame1711, 1724, this.frame1725, 1753, this.frame1754, 1803, this.frame1804);
+            addFrameScript(0, this.frame1, 7, this.frame8, 8, this.frame9, 16, this.frame17, 20, this.frame21, 29, this.frame30, 43, this.frame44, 44, this.frame45, 60, this.frame61, 61, this.frame62, 68, this.frame69, 74, this.frame75, 75, this.frame76, 92, this.frame93, 93, this.frame94, 106, this.frame107, 107, this.frame108, 131, this.frame132, 141, this.frame142, 142, this.frame143, 161, this.frame162, 162, this.frame163, 176, this.frame177, 185, this.frame186, 186, this.frame187, 220, this.frame221, 221, this.frame222, 237, this.frame238, 238, this.frame239, 247, this.frame248, 0x0100, this.frame257, 264, this.frame265, 265, this.frame266, 285, this.frame286, 288, this.frame289, 289, this.frame290, 321, this.frame322, 322, this.frame323, 340, this.frame341, 342, this.frame343, 343, this.frame344, 368, this.frame369, 369, this.frame370, 433, this.frame434, 434, this.frame435, 451, this.frame452, 470, this.frame471, 478, this.frame479, 486, this.frame487, 487, this.frame488, 488, this.frame489, 534, this.frame535, 535, this.frame536, 565, this.frame566, 566, this.frame567, 574, this.frame575, 575, this.frame576, 583, this.frame584, 596, this.frame597, 597, this.frame598, 608, this.frame609, 609, this.frame610, 628, this.frame629, 629, this.frame630, 658, this.frame659, 659, this.frame660, 687, this.frame688, 688, this.frame689, 715, this.frame716, 716, this.frame717, 733, this.frame734, 734, this.frame735, 755, this.frame756, 756, this.frame757, 762, this.frame763, 763, this.frame764, 792, this.frame793, 793, this.frame794, 816, this.frame817, 817, this.frame818, 820, this.frame821, 837, this.frame838, 838, this.frame839, 841, this.frame842, 864, this.frame865, 865, this.frame866, 868, this.frame869, 890, this.frame891, 891, this.frame892, 894, this.frame895, 908, this.frame909, 909, this.frame910, 920, this.frame921, 921, this.frame922, 940, this.frame941, 941, this.frame942, 955, this.frame956, 956, this.frame957, 977, this.frame978, 978, this.frame979, 989, this.frame990, 990, this.frame991, 1003, this.frame1004, 1004, this.frame1005, 1018, this.frame1019, 1019, this.frame1020, 1029, this.frame1030, 1042, this.frame1043, 1043, this.frame1044, 1057, this.frame1058, 1058, this.frame1059, 1069, this.frame1070, 1070, this.frame1071, 1085, this.frame1086, 1086, this.frame1087, 1098, this.frame1099, 1099, this.frame1100, 1110, this.frame1111, 1111, this.frame1112, 1113, this.frame1114, 1114, this.frame1115, 1128, this.frame1129, 1129, this.frame1130, 1135, this.frame1136, 1136, this.frame1137, 1148, this.frame1149, 1149, this.frame1150, 1165, this.frame1166, 1166, this.frame1167, 1177, this.frame1178, 1178, this.frame1179, 1179, this.frame1180, 1189, this.frame1190, 1201, this.frame1202, 1202, this.frame1203, 1221, this.frame1222, 1222, this.frame1223, 1236, this.frame1237, 1237, this.frame1238, 1252, this.frame1253, 1253, this.frame1254, 1286, this.frame1287, 1287, this.frame1288, 1324, this.frame1325, 1325, this.frame1326, 1333, this.frame1334, 1334, this.frame1335, 1406, this.frame1407, 1407, this.frame1408, 1444, this.frame1445, 1445, this.frame1446, 1460, this.frame1461, 1461, this.frame1462, 1470, this.frame1471, 1471, this.frame1472, 1502, this.frame1503, 1503, this.frame1504, 1506, this.frame1507, 1529, this.frame1530, 1530, this.frame1531, 1533, this.frame1534, 1555, this.frame1556, 1556, this.frame1557, 1572, this.frame1573, 1573, this.frame1574, 1586, this.frame1587, 1587, this.frame1588, 1606, this.frame1607, 1607, this.frame1608, 1648, this.frame1649, 1649, this.frame1650, 1658, this.frame1659, 1672, this.frame1673, 1673, this.frame1674, 1690, this.frame1691, 1710, this.frame1711, 1724, this.frame1725, 1753, this.frame1754, 1803, this.frame1804, 1804, this.frame1805, 1847, this.frame1848, 1848, this.frame1849, 1865, this.frame1866, 1866, this.frame1867, 1874 , this.frame1875, 1888, this.frame1889, 1899, this.frame1900, 1908, this.frame1909, 1909, this.frame1910, 1924, this.frame1925, 1925, this.frame1926, 1939, this.frame1940, 1949, this.frame1950, 1950, this.frame1951, 1974, this.frame1975);
         }
 
         public function emoteLoopFrame():int{
@@ -963,6 +965,83 @@ package {
 		function frame1804(){
             MovieClip(parent).endAction();
         }
+		
+		function frame1805(){
+			showIdleFoot();
+			cape.cape.gotoAndStop("Idle");
+        }
+		
+        function frame1848(){
+			gotoAndPlay("Headscratch");
+        }
+		
+		function frame1849(){
+            showIdleFoot();
+            cape.cape.gotoAndStop("Idle");
+		}
+		
+		function frame1866(){
+            stop();
+        }
+		
+		function frame1867(){
+			showIdleFoot();
+            cape.cape.gotoAndStop("Idle");
+		}
+		
+		function frame1875(){
+			this.avtMC = MovieClip(parent);
+            MovieClip(this.avtMC.parent.parent).castSpellFX(this.avtMC.pAV, this.avtMC.spFX, null);
+		}
+		
+		function frame1889(){
+			gotoAndStop("Idle");
+		}
+		
+		function frame1900(){
+			showIdleFoot();
+            cape.cape.gotoAndStop("Idle");
+		}
+		
+		function frame1909(){
+			stop();
+		}
+		
+		function frame1910(){
+			showIdleFoot();
+            cape.cape.gotoAndStop("Idle");
+		}
+		
+		function frame1925(){
+			gotoAndStop("Idle");
+		}
+		
+		function frame1926(){
+			showIdleFoot();
+            cape.cape.gotoAndStop("Idle");
+		}
+		
+		function frame1940(){
+			gotoAndStop("Idle");
+		}
+		
+		function frame1941(){
+			this.showIdleFoot();
+            this.cape.cape.gotoAndStop("Idle");
+		}
+		
+		function frame1950(){
+			stop();
+		}
+		
+		function frame1951(){
+			this.showIdleFoot();
+            this.cape.cape.gotoAndStop("Idle");
+		}
+		
+		function frame1975(){
+			gotoAndStop("Idle");
+		}
     }
 }//package 
 

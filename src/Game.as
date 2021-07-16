@@ -139,7 +139,7 @@
         public var sFilePath:String = "";
         public var params:Object;
 		public var CharacterSWF:String;
-		public var EmojiSWF:String;
+		// public var EmojiSWF:String;
 		public var sUsername:String;
 		public var sPassword:String;
         public var userPreference:SharedObject;
@@ -8695,7 +8695,7 @@
 					mcConnDetail.mcTitle.removeChildAt(0);
 					mcConnDetail.mcTitle.addChild(new (_local1)())
 					CharacterSWF = params.sCharacter;
-					EmojiSWF = params.sEmoji;
+					// EmojiSWF = params.sEmoji;
 					SignupSWF = params.sNewUser;
 					sUsername = params.sUsername;
 					sPassword = params.sPassword;
@@ -9216,8 +9216,8 @@
 					(objLogin.news = [objLogin.news]);
 				};
 			};
-			loadGameAssets();
-			loadGameEmojiAsset();
+			// loadGameAssets();
+			// loadGameEmojiAsset();
 			//news2 = objLogin.news[0].bNews;
 			//trace("NEWS: "+ news2);
 			
@@ -11701,21 +11701,6 @@
 				_local2 = new URLRequest(serverFilePath + "interface/assets/" + CharacterSWF);
 			} else {
 				_local2 = new URLRequest(serverFilePath + "interface/assets/" + CharacterSWF);
-			};
-            _local1.contentLoaderInfo.addEventListener(Event.COMPLETE, onGameAssetsLoaded, false, 0, true);
-            _local1.contentLoaderInfo.addEventListener(IOErrorEvent.IO_ERROR, onGameAssetsLoadError, false, 0, true);
-            _local1.load(_local2, assetsContext);			           
-        }
-		
-		public function loadGameEmojiAsset():void{	
-			trace("loadGameEmoji()");
-			var _local1:Loader = new Loader();
-			var _local2:URLRequest;
-			mcConnDetail.showConn("Loading Emoji...");
-			if (EmojiSWF != ""){
-				_local2 = new URLRequest(serverFilePath + "interface/assets/" + EmojiSWF);
-			} else {
-				_local2 = new URLRequest(serverFilePath + "interface/assets/" + EmojiSWF);
 			};
             _local1.contentLoaderInfo.addEventListener(Event.COMPLETE, onGameAssetsLoaded, false, 0, true);
             _local1.contentLoaderInfo.addEventListener(IOErrorEvent.IO_ERROR, onGameAssetsLoadError, false, 0, true);

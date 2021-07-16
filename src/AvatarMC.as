@@ -34,8 +34,9 @@
         public var bFlyTransition:Boolean = false;
 		
         public var hpBar:MovieClip;
-        public var mcChar:MovieClip;
-		public var EmoticonMC:MovieClip;
+        // public var mcChar:MovieClip;
+        public var mcChar: mcSkel;
+		// public var EmoticonMC:MovieClip;
         public var pname:MovieClip;
         public var ignore:MovieClip;
         public var shadow:MovieClip;
@@ -131,15 +132,15 @@
 			var gameClass = Game.root;
 			
 			/** LOAD AVATAR FILE ASSET **/
-			var character:Class = gameClass.getAssetClass("Skeleton");
-            this.mcChar = MovieClip(this.addChildAt(new (character)(), 1));
-			this.mcChar.x = -2;
+			// var character:Class = gameClass.getAssetClass("Skeleton");
+            // this.mcChar = MovieClip(this.addChildAt(new (character)(), 1));
+			// this.mcChar.x = -2;
 			
 			/** LOAD EMOJI FILE ASSET **/
-			var emoji:Class = gameClass.getAssetClass("Kerubi");
-            this.EmoticonMC = MovieClip(this.addChildAt(new (emoji)(), 1));
+			// var emoji:Class = gameClass.getAssetClass("Kerubi");
+            // this.EmoticonMC = MovieClip(this.addChildAt(new (emoji)(), 1));
 			
-			this.EmoticonMC.visible = false;
+			// this.EmoticonMC.visible = false;
 			this.Sounds.visible = false;
             this.ignore.visible = false;
             this.mcChar.addEventListener(MouseEvent.CLICK, this.onClickHandler);
@@ -157,8 +158,8 @@
 			this.mcChar.addEventListener(MouseEvent.MOUSE_OUT, onHideName);
 			this.mcChar.silenceMC.mouseEnabled = false;
             this.mcChar.silenceMC.mouseChildren = false;
-			this.EmoticonMC.mouseEnabled = false;
-            this.EmoticonMC.mouseChildren = false;
+			// this.EmoticonMC.mouseEnabled = false;
+            // this.EmoticonMC.mouseChildren = false;
             this.mcChar.mouseChildren = true;
 			this.pname.mouseChildren = false;
             this.pname.buttonMode = false;
@@ -1661,8 +1662,8 @@
             _local2 = this.globalToLocal(_local2);
             this.pname.y = int(_local2.y);
 			this.mcVending.y = int(((this.pname.y - this.ignore.height) - 2))
-			this.EmoticonMC.y = int(_local2.y);
-			this.EmoticonMC.x = 20;
+			// this.EmoticonMC.y = int(_local2.y);
+			// this.EmoticonMC.x = 20;
 			this.bubble.y = ((this.pname.y - this.bubble.bg.height) + 15);
             //this.bubble.y = int((this.hpBar.y));//int((this.pname.y - this.bubble.height));
             this.ignore.y = int(((this.pname.y - this.ignore.height) - 2));
