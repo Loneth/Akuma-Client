@@ -1,9 +1,4 @@
-﻿// Decompiled by AS3 Sorcerer 1.40
-// http://www.as3sorcerer.com/
-
-//Avatar
-
-package {
+﻿package {
     import flash.display.MovieClip;
     import flash.filters.GlowFilter;
     import flash.display.Loader;

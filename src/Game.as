@@ -1,9 +1,4 @@
-﻿// Decompiled by AS3 Sorcerer 1.40
-// http://www.as3sorcerer.com/
-
-//Game
-
-package {
+﻿package {
     import flash.display.MovieClip;
     import flash.display.DisplayObject;
 	import flash.media.Sound;
@@ -58,14 +53,15 @@ package {
         public static const FB_APP_URL:String = "www.aq.com";
         public static const FB_APP_ID:String = "51356733862";
         public static const FB_APP_SEC:String = "This should never be stored in the client";
-
         public static var root:DisplayObject;
+
         public static var serverName:String;
         public static var serverPort:int = 3960;//5588;//3959;
         public static var serverIP:String = "";
-        public static var serverFilePath:String = ""; //http://augoeides.org/gamefiles/
         public static var serverURL: String = "http://kuro.test/";
+        public static var serverFilePath: String = serverURL + "gamefiles/";
         public static var serverGameLoginURL: String = serverURL + "game/login";
+
         public static var cLoginZone:String = "zone_master";
         public static var clientToken:String = "N7B5W8W1Y5B1R5VWVZ";
         public static var bPTR:Boolean = false;
@@ -77,7 +73,7 @@ package {
         public static var ASSETS_READY:Boolean = false;
 		
 		public var aliasDefault: String = serverURL + "game";
-		public var aliasCurrent:String = ExternalInterface.call("window.location.href.toString");//"http://leviathanworlds.fun/?play";//ExternalInterface.call("window.location.href.toString");
+		public var aliasCurrent:String = ExternalInterface.call("window.location.href.toString");
 		public var APIKEY:String;
 
         public const EMAIL_REGEX:RegExp = /^[A-Z0-9._%+-]+@(?:[A-Z0-9-]+\.)+[A-Z]{2,4}$/i;
@@ -8496,16 +8492,16 @@ package {
             return (null);
         }
 
-        public function onAddedToStage(_arg1:Event):void{
+        public function onAddedToStage(_arg1: Event) : void
+        {
             (Game.root = this);
             (this.stage.showDefaultContextMenu = false);
             (stage.stageFocusRect = false);
             (mcConnDetail = new ConnDetailMC(this));
-            (serverFilePath = this.loaderInfo.url.substring(0, (this.loaderInfo.url.lastIndexOf("/") + 1)));
-            //(sFilePath = serverFilePath);
+            (sFilePath = serverFilePath);
             trace(("serverFilePath: " + serverFilePath));
             gotoAndPlay("Login");
-            if (userPreference.data.quality != "AUTO"){
+            if (userPreference.data.quality != "AUTO") {
                 (stage.quality = userPreference.data.quality);
             };
         }
@@ -11729,7 +11725,7 @@ package {
 		private function onGameAssetsLoaded(e:Event):void
         {
 			trace("*** LOADED ***");
-            mcConnDetail.hideConn();
+            // mcConnDetail.hideConn();
         }
 		
         private function onGameAssetsLoadError(e:Event):void
